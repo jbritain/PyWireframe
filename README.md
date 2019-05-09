@@ -1,10 +1,10 @@
 ﻿ 
-![enter image description here](https://lh3.googleusercontent.com/XQoxcWLR4Fi8OXt22lIu_TESMA3kzHFIWOjiNFOfJ5uqOzXTDPdyYKhBB800oZ8HxcHfeOCBjOxO=s50)  **Pyreframe**  
+![enter image description here](https://lh3.googleusercontent.com/XQoxcWLR4Fi8OXt22lIu_TESMA3kzHFIWOjiNFOfJ5uqOzXTDPdyYKhBB800oZ8HxcHfeOCBjOxO=s50)  **PyWirereframe**  
 ========================================
 
 What is it?
 
-PyreFrame is a wireframe graphics engine I wrote in which uses turtle graphics.
+PyWirereframe is a wireframe graphics engine I wrote in which uses turtle graphics.
 It is highly inefficient, unrealistic, and does not support rotation of any
 kind.
 
