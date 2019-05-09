@@ -44,6 +44,7 @@ PyWireframe.exit() # closes the PyWireframe window
 PyWireframe.refresh() 3
 
 PyWireframe.cube(0, 0, 0, 100) # draws a cube where the left-bottom-front corner is at 0, 0, 0 and the size is 100
+pyramid4(0, 100, 0, 100) # draws a 4-sided pyramid where the left-bottom-front corner is at 0, 0, 0 and the size is 100
 PyWireframe.CameraX += 1 # moves the camera forward 1 on the z axis
 PyWireframe.FocalLength += 1 # changes the Focal Length by 1
 ```
