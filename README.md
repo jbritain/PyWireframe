@@ -1,57 +1,61 @@
 ﻿ 
-![enter image description here](https://lh3.googleusercontent.com/XQoxcWLR4Fi8OXt22lIu_TESMA3kzHFIWOjiNFOfJ5uqOzXTDPdyYKhBB800oZ8HxcHfeOCBjOxO=s50)  **PyWireframe**  
+![enter image description here](https://lh3.googleusercontent.com/XQoxcWLR4Fi8OXt22lIu_TESMA3kzHFIWOjiNFOfJ5uqOzXTDPdyYKhBB800oZ8HxcHfeOCBjOxO=s50)  #PyWireframe  
 ========================================
 
-What is it?
+PyWireframe is a Python library for creating 3D wireframe graphics. It's highly inefficient (it uses turtle graphics) and doesn't support rotation.
 
-PyWireframe is a wireframe graphics engine I wrote in which uses turtle graphics.
-It is highly inefficient, unrealistic, and does not support rotation of any
-kind.
+## Installation
 
-Using it
-========
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install PyWireframe.
 
-PyWireframe can be used as a module in other programs. The syntax is as follows:
+```bash
+pip install PyWireframe
+```
 
-**Shapes**
+## Usage
 
--   **Cube(X, Y, Z, Size)**: Creates a cube at specified coordinates with
-    specified size. The origin of the cube is the front-bottom-left corner.
 
--   **Pyramid3(X, Y, Z, Size)**: Creates a 3-sided pyramid at specified
-    coordinates with specified size. The origin of the 3-sided pyramid is the
-    front-bottom-left corner.
+**Shapes:**
+PyWireframe has several shape functions built in, but you can also define your own. Currently built-in shapes are:
+```Python
+cube(x, y, z, size) # a cube
+pyramid3(x, y, z, size) # a 3 sided pyramid
+pyramid4(x, y, z, size) # a 4 sided pyramid
+```
+You can also define your own shapes with the 
 
--   **Pyramid4(X, Y, Z, Size)**: Creates a 4-sided pyramid at specified
-    coordinates with specified size. The origin of the 4-sided pyramid is the
-    front-bottom-left corner.
+    line(x1, y1, z1, x2, y2, z2)
+function, e.g
 
--   **Line(X1, Y1, Z1, X2, Y2, Z2)**: Creates a line from the first set of
-    coordinates to the second one.
+```python
+def square:
+	line(0, 0, 0, 100, 0, 0)
+	line(0, 0, 0, 0, 100, 0)
+	line(100, 100, 0, 100, 0, 0)
+	line(100, 100, 100, 0, 0, 0)
+```
 
-**Other syntax**
+**Some syntax:**
+```python
+import PyWireframe
 
--   **Refresh()**: Clears the display. To redraw the shapes, just re-run all of
-    the shape functions specified, e.g
-    
-    def redraw():
-	    PyreFrame.refresh()
-	    cube(0, 0, 0, 100)
-	    herepyramid4(0, 100, 0, 100)
+PyWireframe.start() # starts PyWireframe
+PyWireframe.exit() # closes the PyWireframe window
+PyWireframe.refresh() 3
+PyWireframe.cube(0, 0, 0, 100) # draws a cube with the left-bottom-front corner is at 0, 0, 0 and size 100
+PyWireframe.CameraX += 1 # moves the camera forward 1 on the z axis
+PyWireframe.FocalLength += 1 # changes the Focal Length by 1
+```
 
--   **Start()**: Starts the PyreFrame window. You can’t use PyWireframe until
-    PyWireframe.start() has been called.
+**Example code:**
+```python
+import PyWireframe
+def redraw(): 
+PyreFrame.refresh() 
+cube(0, 0, 0, 100) 
+pyramid4(0, 100, 0, 100)
+```
 
--   **Exit()**: Closes the PyWireframe window.
-
-**Variables**
-
--   **CameraX**: X position of the camera.
-
--   **CameraY**: Y position of the camera.
-
--   **CameraZ**: Z position of the camera.
-
--   **FocalLength**: It’s the focal length. I don’t know what it really does (I
-    didn’t work out the maths!), it’s kind of like the FOV I guess?
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
