@@ -42,7 +42,8 @@ import PyWireframe
 PyWireframe.start() # starts PyWireframe
 PyWireframe.exit() # closes the PyWireframe window
 PyWireframe.refresh() 3
-PyWireframe.cube(0, 0, 0, 100) # draws a cube with the left-bottom-front corner is at 0, 0, 0 and size 100
+
+PyWireframe.cube(0, 0, 0, 100) # draws a cube where the left-bottom-front corner is at 0, 0, 0 and the size is 100
 PyWireframe.CameraX += 1 # moves the camera forward 1 on the z axis
 PyWireframe.FocalLength += 1 # changes the Focal Length by 1
 ```
@@ -50,10 +51,11 @@ PyWireframe.FocalLength += 1 # changes the Focal Length by 1
 **Example code:**
 ```python
 import PyWireframe
+
 def redraw(): 
-PyreFrame.refresh() 
-cube(0, 0, 0, 100) 
-pyramid4(0, 100, 0, 100)
+	PyreFrame.refresh() 
+	cube(0, 0, 0, 100) 
+	pyramid4(0, 100, 0, 100)
 ```
 
 ## License
