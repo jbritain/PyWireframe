@@ -1,0 +1,205 @@
+:root {
+	--bg_color: #FFFFFF ;
+	--acc_color: #58D68D;
+	--acc_color_light: #ABEBC6;
+	--dark_color: #455A64;
+}
+
+body {
+	margin:0;
+}
+
+/*--------------------SIZES--------------------*/
+h1 {
+	font-family: "Product Sans Bold", sans-serif;
+	font-size: 10vw;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+}
+
+h2 {
+	font-family: "Product Sans Bold Italic", sans-serif;
+	font-size: 2.5vw;
+	font-style: italic;
+	width: 100%;
+	text-align: center;
+}
+
+p {
+	font-family: "Product Sans", sans-serif;
+	font-size: 2.5vw;
+}
+
+img {
+	width: 50%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+button {
+  background-color: var(--acc_color);
+  border: none;
+  color: white;
+  padding: 0.7vw 0.8vw;
+  text-align: center;
+  font-size: 2vw;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 2px;
+  margin:auto;
+  display:block
+}
+
+/*--------------------SECTIONS--------------------*/
+
+.header {
+	width: 100%;
+	padding: 60px;
+	z-index: 0;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.section {
+	text-align: left;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+	left: 0;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.accent {
+	background: var(--acc_color);
+	color: var(--bg_color)
+}
+
+.light {
+	background: var(--acc_color_light);
+	color: var(--dark_color)
+}
+
+.dark {
+	background: var(--dark_color);
+	color: var(--bg_color)
+}
+
+.white {
+	background: var(--bg_color);
+	color: var(--acc_color)
+}
+
+
+/*--------------------FONTS--------------------*/
+
+@font-face {
+font-family: "Product Sans Bold";
+src: url("fonts/Product Sans Bold.ttf");
+}
+
+@font-face {
+font-family: "Product Sans";
+src: url("fonts/Product Sans.ttf");
+}
+
+@font-face {
+font-family: "Product Sans Italic";
+src: url("fonts/Product Sans Italic.ttf");
+}
+
+@font-face {
+font-family: "Product Sans Bold Italic";
+src: url("fonts/Product Sans Bold Italic.ttf");
+}
+
+/*--------------------TOPBAR--------------------*/
+
+nav {
+	width: 100%;
+	height: 38px;
+	background-color: var(--bg_color);
+	z-index: 1;
+	margin-bottom: 2.5vw;
+	padding-left: 0.5vw;
+}
+
+nav a {
+    display: block;
+	float: left;
+	color: var(--acc_color);
+	padding-top: 1vw;
+    padding-right: 0.5vw;
+    padding-bottom: 1vw;
+    padding-left: 0.5vw;
+	text-decoration: none;
+	font-size: 2.6470588235294117VW;
+	font-family: "Product Sans Bold", sans-serif;
+ }
+ 
+nav i {
+	padding-top: 0.5vw;
+	cursor: pointer;
+}
+  
+  /*--------------------SIDENAV--------------------*/
+  
+  /* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: var(--dark_color);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 2VW;
+  color: #CFD8DC;
+  display: block;
+  transition: 0.3s;
+  font-family: "Product Sans Bold";
+}
+
+.sidenav i {
+	position: relative;
+	top: 5px;
+	right: 4px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: var(--acc_color)
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* On smaller screens, where width is less than 850px, change the style of the sidenav (less padding) */
+@media screen and (max-width: 850px) {
+  .sidenav {padding-top: 15px;}
+  
+  nav a {font-size: 5vw;}
+  .sidenav a {font-size: 5vw;}
+}
