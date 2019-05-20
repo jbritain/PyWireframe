@@ -24,3 +24,23 @@
 .material-icons.md-36 { font-size: 5.2vw; }
 .material-icons.md-48 { font-size: 7vw; }
 }
+
+/* Rules for sizing the icon. */
+.socicon.text{ font-size: 1.5VW; }
+.socicon.subheading{ font-size: 2.5VW; }
+.socicon.heading{ font-size: 5VW; }
+
+/* Rules for using icons as black on a light background. */
+.socicon.md-dark { color: rgba(0, 0, 0, 0.54); }
+.socicon.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.socicon.md-light { color: rgba(255, 255, 255, 1); }
+.socicon.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.socicon.md-dark { color: rgba(0, 0, 0, 0.54); }
+.socicon.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.socicon.md-light { color: rgba(255, 255, 255, 1); }
+.socicon.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+

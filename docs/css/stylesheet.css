@@ -1,7 +1,7 @@
 :root {
 	--bg_color: #FFFFFF ;
-	--acc_color: #FFC000;
-	--acc_color_light: light-yellow;
+	--acc_color: #58D68D;
+	--acc_color_light: #ABEBC6;
 	--dark_color: #455A64;
 }
 
@@ -12,7 +12,7 @@ body {
 /*--------------------SIZES--------------------*/
 h1 {
 	font-family: "Product Sans Bold", sans-serif;
-	font-size: 10vw;
+	font-size: 5vw;
 	font-weight: bold;
 	width: 100%;
 	text-align: center;
@@ -28,10 +28,19 @@ h2 {
 
 p {
 	font-family: "Product Sans", sans-serif;
-	font-size: 2.5vw;
+	font-size: 1.5vw;
 }
 
-img {
+a {
+	text-decoration: none;
+}
+
+li {
+	font-family: "Product Sans", sans-serif;
+	font-size: 1.5vw;
+}
+
+img:not(.headerimg) {
 	width: 50%;
 	height: auto;
 	display: block;
@@ -45,7 +54,7 @@ button {
   color: white;
   padding: 0.7vw 0.8vw;
   text-align: center;
-  font-size: 2vw;
+  font-size: 1.5vw;
   cursor: pointer;
   transition: 0.3s;
   border-radius: 2px;
