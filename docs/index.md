@@ -1,37 +1,54 @@
-## Welcome to GitHub Pages
+PyWireframe V0.3
+===========
 
-You can use the [editor on GitHub](https://github.com/HyperHamster535/PyWireframe/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+PyWireframe is a Python library for creating 3D wireframe graphics. It's highly
+inefficient (it uses turtle graphics) and doesn't support rotation.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Installation
+------------
 
-### Markdown
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install
+PyWireframe.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+pip install PyWireframe
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-```markdown
-Syntax highlighted code block
+Usage
+-----
+**Objects:** Added in version 0.2, PyWireframe supports the creation of objects that will always be rendered. It uses the following syntax:
 
-# Header 1
-## Header 2
-### Header 3
+```python
+createObject(shape, x, y, z, size) #Creates an object. The shape parameter can use any function defined in the format shown in the 'Shapes' section.
+deleteObject(value) #Deletes the object asigned to the specified value. The number of an object is assigned when it is created.
+printObject(value) #Prints the object associated with a specific value.
+``````
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+**Shapes:** PyWireframe has several shape functions built in, but you can also
+define your own. Currently built-in shapes are:
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```python
+cube(x, y, z, size) # a cube
+pyramid3(x, y, z, size) # a 3 sided pyramid
+pyramid4(x, y, z, size) # a 4 sided pyramid
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+You can also define your own shapes with the```line(x1, y1, z1, x2, y2, z2)```function, e.g
 
-### Jekyll Themes
+```python
+def square:
+    line(0, 0, 0, 100, 0, 0)
+    line(0, 0, 0, 0, 100, 0)
+    line(100, 100, 0, 100, 0, 0)
+    line(100, 100, 100, 0, 0, 0)
+```
+but it must use the format:```def shape(x, y, z, size):```
+for it to be used as an object.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/HyperHamster535/PyWireframe/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+**The Camera:** PyWireframe has a camera, which can be moved with```moveCamera(axis, amount)```. Bear in mind that ```axis``` must be in quotations, e,g ```moveCamera("X", 50)```
 
-### Support or Contact
+License
+-------
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+[MIT](https://choosealicense.com/licenses/mit/)
