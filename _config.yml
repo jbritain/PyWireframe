@@ -1,3 +1,0 @@
-theme: jekyll-theme-minimal
-title: PyWireframe
-description: PyWireframe is a Python library for creating 3D wireframe graphics. It's highly inefficient (it uses turtle graphics) and doesn't support rotation.
