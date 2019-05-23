@@ -14,7 +14,7 @@ PyWireframe.
 
 Usage
 -----
-PyWireframe has three different ways of rendering - [Objects](https://github.com/HyperHamster535/PyWireframe/wiki/Objects), [Shapes](https://github.com/HyperHamster535/PyWireframe/wiki/Shapes), and [Dyanmic Objects](https://github.com/HyperHamster535/PyWireframe/wiki/Dynamic-Objects). For info on the syntax for using these, [see the wiki](https://github.com/HyperHamster535/PyWireframe/wiki/).
+PyWireframe has three different ways of rendering - [Objects](https://github.com/HyperHamster535/PyWireframe/wiki/Objects), [Shapes](https://github.com/HyperHamster535/PyWireframe/wiki/Shapes), and [Dynamic Objects](https://github.com/HyperHamster535/PyWireframe/wiki/Dynamic-Objects). For info on the syntax for using these, [see the wiki](https://github.com/HyperHamster535/PyWireframe/wiki/).
 To start PyWireframe, use `start()`
 To render all existing objects, use `refresh()`
 To exit PyWireframe, use `exit()`
