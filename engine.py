@@ -16,7 +16,7 @@ def start():
 
     import turtle
         
-    print("PyWireframe: Defining render")
+    print("Defining render")
 
     #Define render
     global render
@@ -41,8 +41,13 @@ def addObject(shape, x, y, z, size):
     print("Added " + str(shape) + " object at " + str(x) + ", " + str(y) + ", " + str(z) + " as object #" + str(len(Objects)))
     Objects.append(str(shape) + "(" + str(x) + ", " + str(y) + ", " + str(z) + ", " + str(size) + ")")
 
+def addDynamicObject(function):
+    print("Added '" + function + "' object as object #" + str(len(Objects)))
+    Objects.append(function)
+
 def deleteObject(value):
     Objects.pop(value)
+    print("Deleted object #" + value)
 
 def printObject(value):
     print(str(value) + ": " + str(Objects[value]))
