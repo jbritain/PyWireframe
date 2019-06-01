@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="PyWireframe",
-    version="0.4.0",
+    version="0.5.0",
     author="HyperHamster534",
     author_email="joshua@the-britains.com",
     description="PyreFrame is a wireframe 3D graphics engine which uses turtle graphics. It is highly inefficient, unrealistic, and does not support rotation of any kind.",
