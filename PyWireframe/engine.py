@@ -1,22 +1,36 @@
 import sys
 
 #Define 3D Rendering Variables
-global CameraX, CameraY, CameraZ, FocalLength
+global CameraX, CameraY, CameraZ, FocalLength, doPrint
 
 FocalLength = 100
 CameraX = 0
 CameraY = 0
 CameraZ = 0
 Objects = []
+doPrint = True
+
+def printMode(mode):
+    global doPrint
+
+    if mode == "on":
+        doPrint = True
+    elif mode == "off":
+        doPrint = False
+    else:
+        print("'" + mode + "' is not a valid printMode value.")
+    
 
 def start():
 
-    print("Starting PyWireframe")
-    print("Importing Modules") 
+    if doPrint == True:
+        print("Starting PyWireframe")
+        print("Importing Modules") 
 
     import turtle
-        
-    print("Defining render")
+
+    if doPrint == True:    
+        print("Defining render")
 
     #Define render
     global render
@@ -25,7 +39,8 @@ def start():
     render.speed(0)
     render.hideturtle()
     render.screen.title("PyWireframe")
-    print("PyWireframe has started succesfully!")
+    if doPrint == True:
+        print("PyWireframe has started succesfully!")
 
 #Redraw all predefined objects
 def refresh():
@@ -38,19 +53,25 @@ def exit():
     render.bye()
 
 def addObject(shape, x, y, z, size):
-    print("Added " + str(shape) + " object at " + str(x) + ", " + str(y) + ", " + str(z) + " as object #" + str(len(Objects)))
+    if doPrint == True:
+        print("Added " + str(shape) + " object at " + str(x) + ", " + str(y) + ", " + str(z) + " as object #" + str(len(Objects)))
     Objects.append(str(shape) + "(" + str(x) + ", " + str(y) + ", " + str(z) + ", " + str(size) + ")")
 
 def addDynamicObject(function):
-    print("Added '" + function + "' object as object #" + str(len(Objects)))
+    if doPrint == True:
+        print("Added '" + function + "' object as object #" + str(len(Objects)))
     Objects.append(function)
 
 def deleteObject(value):
     Objects.pop(value)
-    print("Deleted object #" + value)
+    if doPrint == True:
+        print("Deleted object #" + value)
 
 def printObject(value):
-    print(str(value) + ": " + str(Objects[value]))
+    if doPrint == True:
+        print(str(value) + ": " + str(Objects[value]))
+    else:
+        raise Exception("Cannot print object as printing is disabled.")
     
 
 #Define some shapes
