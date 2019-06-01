@@ -18,7 +18,7 @@ PyWireframe has three different ways of rendering - [Objects](https://github.com
 To start PyWireframe, use `start()`
 To render all existing objects, use `refresh()`
 To exit PyWireframe, use `exit()`
-You can also stop PyWireframe from printing to the console with `printMode(mode)`. More info can be found on the [wiki](https://github.com/HyperHamster535/PyWireframe/wiki/printMode).
+You can also stop PyWireframe from printing to the console with `printMode(mode)`. More info can be found on the [wiki](https://github.com/HyperHamster535/PyWireframe/wiki/The-printMode(mode)-Function).
 
 License
 -------
