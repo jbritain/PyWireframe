@@ -1,0 +1,12 @@
+# Objects
+
+## What are they?
+Objects are 3D shapes that render every time you `refresh()` instead of having to be redefined.
+
+## Creating and removing objects
+Objects are created with the `addObject(shape, x, y, z, size)` function. The `shape` attribute can be any of the predefined shapes, or ones you have defined yourself. _**The `shape` attribute must be in parentheses.**_ More info on shapes can be found [here](https://github.com/HyperHamster535/PyWireframe/wiki/shapes). When an object is created, it is assigned a value which is printed to the terminal. In future versions I hope to create a better way to access this value.
+
+Objects are deleted with the `deleteObject(value)` function. The `value` attribute is assigned when an object is created, more info is in the section on creating objects.
+
+You can also print the object data associated with a specific value with the `printObject(value)` function.
+
