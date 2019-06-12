@@ -1,4 +1,4 @@
-PyWireframe V0.4
+Overview
 ===========
 
 PyWireframe is a Python library for creating 3D wireframe graphics. It's highly
