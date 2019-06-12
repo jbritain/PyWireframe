@@ -9,8 +9,6 @@ Welcome to PyWireframe's documentation!
 
 Here you can find all the info you'll ever need about PyWireframe!
 
-Getting Started
-
 .. toctree::
 	:maxdepth: 2
 	:caption: Getting Started
