@@ -7,5 +7,5 @@
 ## Start it
 To start PyWireframe, execute the `start()` function.
 
-# Closing PyWireframe
+## Closing PyWireframe
 To close the PyWireframe window, use `exit()`.

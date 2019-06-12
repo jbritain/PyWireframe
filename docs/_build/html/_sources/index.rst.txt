@@ -5,16 +5,6 @@
 
 Welcome to PyWireframe's documentation!
 =======================================
+.. image:: https://i.imgur.com/jDUmId1.png
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+Here you can find all the info you'll ever need about PyWireframe!

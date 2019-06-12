@@ -10,7 +10,7 @@ Installation
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install
 PyWireframe.
 
-# `pip install PyWireframe`
+`pip install PyWireframe`
 
 Usage
 -----
