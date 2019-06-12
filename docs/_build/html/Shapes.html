@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Shapes &#8212; PyWireframe 0.5 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="shapes">
+<h1>Shapes<a class="headerlink" href="#shapes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-are-they">
+<h2>What are they?<a class="headerlink" href="#what-are-they" title="Permalink to this headline">¶</a></h2>
+<p>Shapes are functions that render a 3D object when executed.</p>
+</div>
+<div class="section" id="executing-a-shape">
+<h2>Executing a shape<a class="headerlink" href="#executing-a-shape" title="Permalink to this headline">¶</a></h2>
+<p>To render a shape, just run the function with the desired parameters and it will render. Bear in mind that shapes do not re-render when the <code class="docutils literal notranslate"><span class="pre">refresh()</span></code> function is run. If you do want them to re-render, see <a class="reference external" href="https://github.com/HyperHamster535/PyWireframe/wiki/Objects">objects</a></p>
+</div>
+<div class="section" id="predefined-shapes">
+<h2>Predefined Shapes<a class="headerlink" href="#predefined-shapes" title="Permalink to this headline">¶</a></h2>
+<p>As of version 0.3, PyWireframe has three predefined shapes. They are <code class="docutils literal notranslate"><span class="pre">cube</span></code>, <code class="docutils literal notranslate"><span class="pre">pyramid3</span></code>, and <code class="docutils literal notranslate"><span class="pre">pyramid4</span></code>. All predefined shapes use the syntax <code class="docutils literal notranslate"><span class="pre">shape(x,</span> <span class="pre">y,</span> <span class="pre">z,</span> <span class="pre">size)</span></code>.</p>
+</div>
+<div class="section" id="defining-shapes">
+<h2>Defining shapes<a class="headerlink" href="#defining-shapes" title="Permalink to this headline">¶</a></h2>
+<p>You can define your own shapes as well. When defining shapes, you create a function which contains a series of <code class="docutils literal notranslate"><span class="pre">line(x1,</span> <span class="pre">y1,</span> <span class="pre">z1,</span> <span class="pre">x2,</span> <span class="pre">y2,</span> <span class="pre">z2)</span></code> functions. These parameters should be coordinates relative to the shape’s coordinates. Here’s an example shape (a cube).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="k">def</span> <span class="nf">cube</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">+</span> <span class="n">size</span><span class="p">)</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">z</span> <span class="o">+</span> <span class="n">size</span><span class="p">)</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">z</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">z</span> <span class="o">+</span> <span class="n">size</span><span class="p">)</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">z</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">+</span> <span class="n">size</span><span class="p">)</span>
+
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">+</span> <span class="n">size</span><span class="p">)</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">+</span> <span class="n">size</span><span class="p">)</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">z</span> <span class="o">+</span> <span class="n">size</span><span class="p">)</span>
+    <span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">size</span><span class="p">,</span> <span class="n">z</span> <span class="o">+</span> <span class="n">size</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-your-own-shapes-as-objects">
+<h2>Using your own shapes as objects<a class="headerlink" href="#using-your-own-shapes-as-objects" title="Permalink to this headline">¶</a></h2>
+<p>You can use your shapes as objects, but only if they are defined in the format <code class="docutils literal notranslate"><span class="pre">shape(x,</span> <span class="pre">y,</span> <span class="pre">z,</span> <span class="pre">size)</span></code>. I plan to add support for more formats in the future.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">PyWireframe</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, HyperHamster534.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Shapes.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,11 @@
+# Starting PyWireframe
+
+## Import it
+* First, make sure PyWireframe is [installed](https://github.com/HyperHamster535/PyWireframe/wiki/Installation).
+* PyWireframe is imported with `Import PyWireframe`.
+
+## Start it
+To start PyWireframe, execute the `start()` function.
+
+# Closing PyWireframe
+To close the PyWireframe window, use `exit()`.
