@@ -2,7 +2,7 @@
 
 ## What's the difference?
 
-The difference between an [object](https://github.com/HyperHamster535/PyWireframe/wiki/Objects) and a [shape](https://github.com/HyperHamster535/PyWireframe/wiki/Shapes) is that an object re-renders every time you `refresh`, whereas a shape vanishes.
+The difference between an [object](https://pywireframe.readthedocs.io/Usage/Objects) and a [shape](https://pywireframe.readthedocs.io/Usage/Shapes) is that an object re-renders every time you `refresh`, whereas a shape vanishes.
 
 ## Which one should I use?
 

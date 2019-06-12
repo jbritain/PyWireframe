@@ -1,7 +1,7 @@
 # Starting PyWireframe
 
 ## Import it
-* First, make sure PyWireframe is [installed](https://github.com/HyperHamster535/PyWireframe/wiki/Installation).
+* First, make sure PyWireframe is [installed](https://pywireframe.readthedocs.io/Usage/Installation).
 * PyWireframe is imported with `Import PyWireframe`.
 
 ## Start it

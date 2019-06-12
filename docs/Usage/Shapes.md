@@ -4,7 +4,7 @@
 Shapes are functions that render a 3D object when executed.
 
 ## Executing a shape
-To render a shape, just run the function with the desired parameters and it will render. Bear in mind that shapes do not re-render when the `refresh()` function is run. If you do want them to re-render, see [objects](https://github.com/HyperHamster535/PyWireframe/wiki/Objects)
+To render a shape, just run the function with the desired parameters and it will render. Bear in mind that shapes do not re-render when the `refresh()` function is run. If you do want them to re-render, see [objects](https://pywireframe.readthedocs.io/Usage/Objects)
 
 ## Predefined Shapes
 As of version 0.3, PyWireframe has three predefined shapes. They are `cube`, `pyramid3`, and `pyramid4`. All predefined shapes use the syntax `shape(x, y, z, size)`.

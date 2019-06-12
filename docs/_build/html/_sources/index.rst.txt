@@ -16,8 +16,6 @@ Here you can find all the info you'll ever need about PyWireframe!
 	Getting Started/Overview
 	Getting Started/Installation
 	Getting Started/FAQ
-	
-Usage
 
 .. toctree::
 	:maxdepth: 2
@@ -31,3 +29,10 @@ Usage
 	Usage/Camera
 	Usage/The-printMode(mode)-Function
 	Usage/The-debug()-Function
+	
+.. toctree::
+	:maxdepth: 2
+	:caption: External Links
+	
+	PyPi<https://pypi.org/project/PyWireframe>
+	Website<https://hyperhamster535.github.io/PyWireframe>
