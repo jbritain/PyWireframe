@@ -50,7 +50,7 @@ def refresh():
         exec(a)
 
 def exit():
-    render.bye()
+    render.screen.bye()
 
 def addObject(shape, x, y, z, size):
     if doPrint == True:
