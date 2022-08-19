@@ -8,6 +8,8 @@ Welcome to PyWireframe's documentation!
 .. image:: https://i.imgur.com/jDUmId1.png
 
 Here you can find all the info you'll ever need about PyWireframe!
+This project is old and defunct, however PyWireframe-extended<https://pypi.org/project/PyWireframe-extended/> seems to be being actively developed.
+
 
 .. toctree::
 	:maxdepth: 2
@@ -35,4 +37,4 @@ Here you can find all the info you'll ever need about PyWireframe!
 	:caption: External Links
 	
 	PyPi<https://pypi.org/project/PyWireframe>
-	Website<https://hyperhamster535.github.io/PyWireframe>
+	Website<https://jbritain.github.io/PyWireframe>

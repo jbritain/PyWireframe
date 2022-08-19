@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'PyWireframe'
-copyright = '2019, HyperHamster534'
-author = 'HyperHamster534'
+copyright = '2019 Joshua Britain'
+author = 'Joshua Britain'
 
 # The full version, including alpha/beta/rc tags
-release = '0.5'
+release = '0.5.1'
 
 
 # -- General configuration ---------------------------------------------------
